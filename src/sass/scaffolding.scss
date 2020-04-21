@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  display: flex; // Исправляем баг в IE для min-height and flexbox (flex-direction:column)
+  flex-direction: column; // и прижимаем footer в IE 10-11
+  min-width: $mobile-width;
+  min-height: 100%;
+  margin: 0 auto;
+
+  font-weight: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $font;
+  color: $main-text;
+  word-break: break-word;
+
+  background-color: $main-bg;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  // http://clagnut.com/blog/2395
+  // https://habr.com/ru/post/445166/
+  hyphens: auto;
+
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-last: always;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-zone: 8%;
+}
+
+.svg-test {
+  fill: black;
+  stroke: green;
+}
+
+.test-checkbox {
+  position: relative;
+  appearance: none;
+  //width: 30px;
+  //height: 30px;
+  //background-color: black;
+  //vertical-align: middle;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+
+    background: svg-load('../img/Anime_stub_2.svg');
+  }
+
+  &:checked {
+    &::before {
+      background: svg-load('../img/Anime_stub_2.svg', fill=red);
+    }
+  }
+}
+
+.testpicture {
+  @include sprite($rage_ru);
+}
