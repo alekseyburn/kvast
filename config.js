@@ -2,14 +2,14 @@
 
 let config = {
   'notGetBlocks': [
-    'blocks-demo.html'
+
   ],
   'ignoredBlocks': [
     'no-js'
   ],
   'alwaysAddBlocks': [
-    'sprite-svg',
-    'sprite-png',
+    // 'sprite-svg',
+    // 'sprite-png',
     // 'object-fit-polyfill',
   ],
   'addStyleBefore': [
@@ -17,7 +17,7 @@ let config = {
     'src/sass/mixins.scss',
     'src/sass/fonts.scss',
     'src/sass/visually-hidden.scss',
-    'src/sass/corrections.scss'
+    // 'src/sass/corrections.scss'
     // 'somePackage/dist/somePackage.css', // для 'node_modules/somePackage/dist/somePackage.css',
   ],
   'addStyleAfter': [
