@@ -1,0 +1,32 @@
+//- Все примеси в этом файле должны начинаться c имени блока (features)
+
+mixin features(text, classes)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   classes    {string} - список классов
+  //- Вызов:
+        +features('Текст', 'some-class')
+
+  -
+    // список модификаторов
+    let allClasses = '';
+    if(typeof(classes) !== 'undefined' && classes) {
+      let classesList = classes.split(',');
+      for (let item of classesList) {
+        allClasses = allClasses + item.trim();
+      }
+    }
+
+  section.features(class=allClasses)&attributes(attributes)
+    h2.visually-hidden Преимущества
+    ul.features__list
+      li.features__item
+        h3.features__title Варим сами
+        p.features__text Вот этими самыми руками. Экспериментируем и творим, что хотим.
+      li.features__item
+        h3.features__title Своё, родное
+        p.features__text Не заработка ради, а импортозамещения для. Поднимаем производство.
+      li.features__item
+        h3.features__title Не экономим
+        p.features__text Человек это то, что он ест и пьёт. У нас только качественные ингредиенты.

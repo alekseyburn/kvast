@@ -20,36 +20,33 @@ mixin new-products(text, classes)
 
   section.new-products(class=allClasses)&attributes(attributes)
     h2.new-products__title Новинки
-    ul.new-products__list
-      li.new-products__item
-        article.new-products__article
-          h3.new-products__name Вахтёр
-          table.new-products__table
-            tr.new-products__row
-              th Алк.
-              td < 1%
-            tr.new-products__row
-              th Ккал
-              td 35
-          p.new-products__composition Ржаной хлеб, Вода, Солод, Соль
-          img.new-products__image(src='/', alt='Вахтёр')
-          p.new-products__description Терпкий и мощный, вкус этого кваса взбодрит после тяжёлого дня и придаст сил для вечерних приключений!
-          +btn('Подробнее','new-products__link')(href='/')
-          +btn('Купить','btn--dark new-products__buy-link')(href='/')
-          b.new-products__price 150 Р.
-      li.new-products__item
-        article.new-products__article
-          h3.new-products__name Романтик
-          table.new-products__table
-            tr.new-products__row
-              th Алк.
-              td < 0,5%
-            tr.new-products__row
-              th Ккал
-              td 27
-          p.new-products__composition Ячменный хлеб, Вода, Солод, Апельсин
-          img.new-products__image(src='/', alt='Романтик')
-          p.new-products__description Лёгкий и освежающий напиток поможет сохранять отличное настроение в течение всего дня.
-          +btn('Подробнее','new-products__link')(href='/')
-          +btn('Купить','btn--dark new-products__buy-link')(href='/')
-          b.new-products__price 90 Р.
+    article.new-products__article
+      h3.new-products__name Вахтёр
+      table.new-products__table
+        tr
+          th Алк.
+          td < 1%
+        tr
+          th Ккал
+          td 35
+      p.new-products__composition Ржаной хлеб, Вода, Солод, Соль
+      img.new-products__image(src='/', alt='Вахтёр')
+      p.new-products__description Терпкий и мощный, вкус этого кваса взбодрит после тяжёлого дня и придаст сил для вечерних приключений!
+      +btn('Подробнее','new-products__link')(href='/')
+      +btn('Купить','btn--dark new-products__buy-link')(href='/')
+      b.new-products__price 150 Р.
+    article.new-products__article
+      h3.new-products__name Романтик
+      table.new-products__table
+        tr
+          th Алк.
+          td < 0,5%
+        tr
+          th Ккал
+          td 27
+      p.new-products__composition Ячменный хлеб, Вода, Солод, Апельсин
+      img.new-products__image(src='/', alt='Романтик')
+      p.new-products__description Лёгкий и освежающий напиток поможет сохранять отличное настроение в течение всего дня.
+      +btn('Подробнее','new-products__link')(href='/')
+      +btn('Купить','btn--dark new-products__buy-link')(href='/')
+      b.new-products__price 90 Р.
