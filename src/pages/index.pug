@@ -11,9 +11,11 @@ block header
   +logo('/', 'page-header__logo')
     img.logo__img(src='/img/logo.svg', alt='Кваст')
   +main-nav()
-  h1.page-header__title Крафтовый квас всему голова!
+  p.page-header__slogan Крафтовый квас всему голова!
 
 block content
+  h1.visually-hidden Крафтовый квас Кваст
+  +new-products()
   p Содержимое. #[a(href='blocks-demo.html') Библиотека блоков].
   svg(width='64', height='64')
     use(xlink:href='img/sprite.svg#logo')
