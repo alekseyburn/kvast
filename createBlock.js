@@ -16,7 +16,7 @@ process.argv[n]
 В нашем случае [2] - имя блока, [3-...] - имена расширений
  */
 const blockName = process.argv[2];
-const defaultExtensions = ['scss']; //расширения по умолчанию
+const defaultExtensions = ['scss', 'pug']; //расширения по умолчанию
 //добавляем к массиву defaultExtensions additional extensions, заданные при вводе run node createBlock, затем удаляем дубликаты
 const extensions = uniqueArray(defaultExtensions.concat(process.argv.slice(3)));
 

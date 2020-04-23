@@ -28,7 +28,7 @@ mixin btn(text, classes, isInput)
 
   //- иначе, если передан isInput и он true, это input
   else if (typeof(isInput) !== 'undefined' && isInput)
-    input.btn(class=allClasses, value=text, type='button')&attributes(attributes)
+    input.btn(class=allClasses, value=text, type='submit')&attributes(attributes)
 
   //- иначе это button
   else

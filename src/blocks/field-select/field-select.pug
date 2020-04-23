@@ -1,0 +1,34 @@
+//- Все примеси в этом файле должны начинаться c имени блока (field-select)
+
+mixin field-select(title, name, classes)
+
+  //- Принимает:
+  //-   title    {string} - название
+  //-   name    {string} - показываемое имя при отправке
+  //-   classes    {string} - список классов
+  //- Вызов:
+        +field-select('Текст', 'имя', 'some-class')
+
+  -
+    // список модификаторов
+    let allClasses = '';
+    if(typeof(classes) !== 'undefined' && classes) {
+      let classesList = classes.split(',');
+      for (let item of classesList) {
+        allClasses = allClasses + item.trim();
+      }
+    }
+
+    let options = [
+      {
+        text: 'от 5 до 10 баррелей в неделю',
+        value: '5-10',
+      }
+    ]
+
+  if(typeof(title) !== 'undefined' && title)
+    label.field-select(class=allClasses)&attributes(attributes)
+      span.field-select__name!= title
+      select.field-select__select(name=name)&attributes(attributes)
+        each option in options
+          option.field-select__option(value=option.value)!= option.text
