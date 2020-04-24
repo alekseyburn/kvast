@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (copyright)
+
+mixin copyright(classes)
+
+  //- Принимает:
+  //-   classes    {string} - список классов
+  //- Вызов:
+        +copyright('some-class')
+
+  -
+    // список модификаторов
+    let allClasses = '';
+    if(typeof(classes) !== 'undefined' && classes) {
+      let classesList = classes.split(',');
+      for (let item of classesList) {
+        allClasses = allClasses + item.trim();
+      }
+    }
+
+  .copyright(class=allClasses)&attributes(attributes)
+    img.copyright__img(src='/', alt='логотип Html Academy')
+    b.copyright__text Разработчик:
+    a.copyright__link(href='/') HTML Academy

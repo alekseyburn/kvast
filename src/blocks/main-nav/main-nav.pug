@@ -9,7 +9,7 @@ mixin main-nav(text, classes)
         +main-nav('Текст', 'some-class')
 
   -
-    // список модификаторов
+    // список классов
     let allClasses = '';
     if(typeof(classes) !== 'undefined' && classes) {
       let classesList = classes.split(',');
@@ -19,5 +19,4 @@ mixin main-nav(text, classes)
     }
 
   nav.main-nav(class=allClasses)&attributes(attributes)
-    +site-list()
-      block
+    block

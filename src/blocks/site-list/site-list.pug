@@ -2,17 +2,27 @@
 //- Все примеси в этом файле должны начинаться c имени блока (site-list)
 //- Структура меню — в site-list.data.pug
 
-mixin site-list(selectedID)
+mixin site-list(classes,selectedID)
 
+  -
+    // список классов
+      let allClasses = '';
+      if(typeof(classes) !== 'undefined' && classes) {
+        let classesList = classes.split(',');
+        for (let item of classesList) {
+          allClasses = allClasses + item.trim();
+        }
+      }
   //- Принимает:
+  //-   classes    {string} - список классов
   //-   selectedID {string} - id пункта меню (по умолчанию — из site-list.data.pug)
   //- Вызов:
-        +site-list('1')
+        +site-list('class 1', '1')
 
   //- подключаем файл со структурой данных блока
   include site-list.data.pug
 
-  ul(class='main-nav__list site-list')
+  ul.site-list(class=allClasses)
     each menuItem in mainMenu
       +site-list-item(selectedID, menuItem, 1)
         if (typeof (menuItem.childs) !== 'undefined' && menuItem.childs)

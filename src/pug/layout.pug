@@ -31,13 +31,11 @@ html(class='no-js', lang='ru')
         include ../js/head-script.js
 
   body
-
     +page-header()
       block header
-    block content
-      p содержимое
+    main.page-main
+      block content
     +page-footer()
-      p подвал
       block footer
 
     block page-bottom

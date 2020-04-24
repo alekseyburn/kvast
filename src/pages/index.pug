@@ -11,6 +11,7 @@ block header
   +logo('/', 'page-header__logo')
     img.logo__img(src='/img/logo.svg', alt='Кваст')
   +main-nav()
+    +site-list('main-nav__list')
   p.page-header__slogan Крафтовый квас всему голова!
 
 block content
@@ -82,30 +83,16 @@ block content
         },
       ])
       +btn('Отправить заказ', 'form__btn', true)
-  p Содержимое. #[a(href='blocks-demo.html') Библиотека блоков].
-  svg(width='64', height='64')
-    use(xlink:href='img/sprite.svg#logo')
-  svg.svg-test(width='32', height='32')
-    use(xlink:href='img/sprite.svg#icon-heart')
-
-
-
-  +radio([
-    {
-      title: 'Радиокнопка1',
-      helpText: 'Подсказка',
-      classes: 'kek kek1 kek2',
-      attrs: {
-        name: 'radio',
-      }
-    },
-  ])
-
-  .testpicture hi
 
 block footer
-  p «Подвал»
-  p Контактный телефон: #[a(href='tel:+70000000000') +7 000 000 00 00]
-
+  +logo('/', 'page-footer__logo')
+    img.logo__img(src='/img/logo.svg', alt='Кваст')
+  +site-list()
+  +social('page-footer__social')
+    +social-link('instagram','/','Мы в инстаграме')
+      //- svg
+    +social-link('facebook','/','Мы в фейсбуке')
+    +social-link('vk','/','Мы в контакте')
+  +copyright('page-footer__copyright')
 //- block append page-bottom
 //-   script(src='js/some.js')
