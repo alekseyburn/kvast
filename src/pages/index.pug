@@ -1,50 +1,103 @@
 extends ../pug/layout.pug
 
 block meta
-  title Главная
-  meta(name='description', content='')
+  meta(name='description', content='Крафтовый квас')
+  title КВАСТ
 
 //- block append head
 //-   link(rel='stylesheet', href='css/some.css')
 
-block nav
-  p.nothing test
+block header
+  +logo('/', 'page-header__logo')
+    img.logo__img(src='/img/logo.svg', alt='Кваст')
+  +main-nav()
+    +site-list('main-nav__list')
+  p.page-header__slogan Крафтовый квас всему голова!
 
 block content
-  h1 Заголовок с каким-то эффектом
-  p Содержимое. #[a(href='blocks-demo.html') Библиотека блоков].
-  svg(width='64', height='64')
-    use(xlink:href='img/sprite.svg#logo')
-  svg.svg-test(width='32', height='32')
-    use(xlink:href='img/sprite.svg#icon-heart')
+  h1.visually-hidden Крафтовый квас Кваст
+  +new-products()
+  +features()
+  +history()
+  +press()
+  +assortment()
+    +tr('Название, Алк., Ккал, Объём, Стоимость', true)
+    +tr('Классика, < 1,2%, 33, 330 мл, 120 Р.')
+    +tr('Шабаш, > 1,2%, 45, 330 мл, 250 Р.')
+    +tr('Вахтёр, < 1%, 35, 0,5 л, 150 Р.', false, true)
+    +tr('Романтик, < 0,5%, 27, 0,5 л, 90 Р.', false, true)
+  +order()
+    +form('order__form','POST','/')
+      +field-text({
+        label: 'Представьтесь:',
+        side: 'up',
+        classes: 'form__field',
+        attrs: {
+          name: 'name'
+        }
+      })
+      +field-text({
+        label: 'Номер телефона:',
+        side: 'up',
+        classes: 'form__field',
+        attrs: {
+          name: 'phone',
+          type: 'tel',
+          pattern: '\\+7\\s[0-9]{3}\\s[0-9]{3}\\s[0-9]{2}\\s[0-9]{2}',
+          placeholder: '+7 XXX XXX XX XX'
+        }
+      })
+      +field-text({
+        label: 'Доп. номер:',
+        side: 'up',
+        classes: 'form__field',
+        attrs: {
+          name: 'second phone',
+          type: 'tel',
+          pattern: '\\+7\\s[0-9]{3}\\s[0-9]{3}\\s[0-9]{2}\\s[0-9]{2}',
+          placeholder: '+7 XXX XXX XX XX'
+        }
+      })
+      +field-text({
+        label: 'Email:',
+        side: 'up',
+        classes: 'form__field',
+        attrs: {
+          name: 'email',
+          type: 'email'
+        }
+      })
 
-  +checkbox([
-    {
-      title: 'Чекбокс0',
-      helpText: 'Подсказка',
-      classes: 'lol lol2 lol3 test-checkbox',
-      attrs: {
-        name: 'check0',
-      }
-    },
-  ])
-
-  +radio([
-    {
-      title: 'Радиокнопка1',
-      helpText: 'Подсказка',
-      classes: 'kek kek1 kek2',
-      attrs: {
-        name: 'radio',
-      }
-    },
-  ])
-
-  .testpicture hi
+      +field-select('Объём заказа:', 'quantity', 'form__field')
+      +field-text({
+        label: 'Доп. комментарий:',
+        side: 'up',
+        isTextarea: true,
+        classes: 'form__field',
+        attrs: {
+          name: 'textarea'
+        }
+      })
+      +checkbox([
+        {
+          title: 'Я согласен получать квасную рассылку',
+          classes: 'form__field',
+          attrs: {
+            name: 'mail',
+          }
+        },
+      ])
+      +btn('Отправить заказ', 'form__btn', true)
 
 block footer
-  p «Подвал»
-  p Контактный телефон: #[a(href='tel:+70000000000') +7 000 000 00 00]
-
+  +logo('/', 'page-footer__logo')
+    img.logo__img(src='/img/logo.svg', alt='Кваст')
+  +site-list('page-footer__nav')
+  +social('page-footer__social')
+    +social-link('instagram','/','Мы в инстаграме')
+      //- svg
+    +social-link('facebook','/','Мы в фейсбуке')
+    +social-link('vk','/','Мы в контакте')
+  +copyright('page-footer__copyright')
 //- block append page-bottom
 //-   script(src='js/some.js')

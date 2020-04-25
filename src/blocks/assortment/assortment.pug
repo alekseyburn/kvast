@@ -1,0 +1,38 @@
+//- Все примеси в этом файле должны начинаться c имени блока (assortment)
+
+mixin assortment(classes)
+
+  //- Принимает:
+  //-   classes    {string} - список классов
+  //- Вызов:
+        +assortment('some-class')
+          +tr('1, 2, 3, 4, 5', true)        - строка-заголовок th
+          +tr('1, 2, 3, 4, 5')              - строка td
+          +tr('1, 2, 3, 4, 5', false, true  - строка td(первой ячейке задан класс new)
+
+  -
+    // список классов
+    let allClasses = '';
+    if(typeof(classes) !== 'undefined' && classes) {
+      for (let item of classes.split(',')) {
+        allClasses = allClasses + item.trim();
+      }
+    }
+
+  section(class=`${allClasses.length > 0 ?`${allClasses} `: `` }assortment`)&attributes(attributes)
+    h2.assortment__title Ассортимент
+    table.assortment__table
+      block
+
+mixin tr(names, isHead, isNew)
+  -
+    let list = names.split(', ');
+  tr.assortment__row
+    each item,index in list
+      if (isHead)
+        th.assortment__cell.assortment__cell--head= item
+      else
+        if (isNew && index === 0)
+          td.assortment__cell.assortment__cell--new= item
+        else
+          td.assortment__cell= item
