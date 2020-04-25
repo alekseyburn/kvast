@@ -36,7 +36,7 @@ if (blockName) {
       } else if (extension === 'md') {
         fileContent = '';
       } else if (extension === 'pug') {
-        fileContent = `//- Все примеси в этом файле должны начинаться c имени блока (${blockName})\n\nmixin ${blockName}(text, classes)\n\n  //- Принимает:\n  //-   text    {string} - текст\n  //-   classes    {string} - список классов\n  //- Вызов:\n        +${blockName}('Текст', 'some-class')\n\n  -\n    // список модификаторов\n    let allClasses = '';\n    if(typeof(classes) !== 'undefined' && classes) {\n      let classesList = classes.split(',');\n      for (let item of classesList) {\n        allClasses = allClasses + item.trim();\n      }\n    }\n\n  .${blockName}(class=allClasses)&attributes(attributes)\n      block\n`;
+        fileContent = `//- Все примеси в этом файле должны начинаться c имени блока (${blockName})\n\nmixin ${blockName}(classes)\n\n  //- Принимает:\n  //-   classes    {string} - список классов\n  //- Вызов:\n        +${blockName}('some-class')\n\n  -\n    // список классов\n    let allClasses = '';\n    if(typeof(classes) !== 'undefined' && classes) {\n      for (let item of classes.split(',')) {\n        allClasses = allClasses + item.trim();\n      }\n    }\n\n  div(class=\`\${allClasses.length > 0 ? \`\${allClasses}\` : \`\`}${blockName}\`)&attributes(attributes)\n    block\n`;
       } else if (extension === 'img') {
         const imgFolder = `${dirPath}img/`;
         if (fileExist(imgFolder) === false) {

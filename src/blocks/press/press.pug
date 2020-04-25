@@ -1,24 +1,22 @@
 //- Все примеси в этом файле должны начинаться c имени блока (press)
 
-mixin press(text, classes)
+mixin press(classes)
 
   //- Принимает:
-  //-   text    {string} - текст
   //-   classes    {string} - список классов
   //- Вызов:
-        +press('Текст', 'some-class')
+        +press('some-class')
 
   -
-    // список модификаторов
+    // список классов
     let allClasses = '';
     if(typeof(classes) !== 'undefined' && classes) {
-      let classesList = classes.split(',');
-      for (let item of classesList) {
+      for (let item of classes.split(',')) {
         allClasses = allClasses + item.trim();
       }
     }
 
-  section.press(class=allClasses)&attributes(attributes)
+  section(class=`${allClasses.length > 0 ?`${allClasses} `: `` }press`)&attributes(attributes)
     h2.press__title Пресса о нас
     blockquote.press__blockquote
       p.press__text Сегодня мы провели дегустацию чего-то действительно новенького — крафтового кваса. Да, да, вы не ослышались! Спасибо Арсену и Руслану за то, что предоставили целую бочку своего напитка!

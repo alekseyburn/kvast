@@ -8,16 +8,15 @@ mixin copyright(classes)
         +copyright('some-class')
 
   -
-    // список модификаторов
+    // список классов
     let allClasses = '';
     if(typeof(classes) !== 'undefined' && classes) {
-      let classesList = classes.split(',');
-      for (let item of classesList) {
+      for (let item of classes.split(',')) {
         allClasses = allClasses + item.trim();
       }
     }
 
-  .copyright(class=allClasses)&attributes(attributes)
+  div(class=`${allClasses.length > 0 ?`${allClasses} `: `` }copyright`)&attributes(attributes)
     img.copyright__img(src='/', alt='логотип Html Academy')
     b.copyright__text Разработчик:
     a.copyright__link(href='/') HTML Academy

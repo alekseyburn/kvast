@@ -1,24 +1,22 @@
 //- Все примеси в этом файле должны начинаться c имени блока (history)
 
-mixin history(text, classes)
+mixin history(classes)
 
   //- Принимает:
-  //-   text    {string} - текст
   //-   classes    {string} - список классов
   //- Вызов:
-        +history('Текст', 'some-class')
+        +history('some-class')
 
   -
-    // список модификаторов
+    // список классов
     let allClasses = '';
     if(typeof(classes) !== 'undefined' && classes) {
-      let classesList = classes.split(',');
-      for (let item of classesList) {
+      for (let item of classes.split(',')) {
         allClasses = allClasses + item.trim();
       }
     }
 
-  section.history(class=allClasses)&attributes(attributes)
+  section(class=`${allClasses.length > 0 ?`${allClasses} `: `` }history`)&attributes(attributes)
     h2.history__title Немного теории
     dl.history__list
       dt.history__term

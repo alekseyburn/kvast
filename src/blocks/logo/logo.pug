@@ -3,20 +3,19 @@
 mixin logo(href, classes)
 
   //- Принимает:
-  //-   text    {string} - текст
+  //-   href    {string} - ссылка
   //-   classes    {string} - список классов
   //- Вызов:
-        +logo('Текст', 'some-class')
+        +logo('/', 'some-class')
 
   -
-    // список модификаторов
+    // список классов
     let allClasses = '';
     if(typeof(classes) !== 'undefined' && classes) {
-      let classesList = classes.split(',');
-      for (let item of classesList) {
+      for (let item of classes.split(',')) {
         allClasses = allClasses + item.trim();
       }
     }
 
-  a.logo(class=allClasses, href=href)&attributes(attributes)
-      block
+  a(class=`${allClasses.length > 0 ?`${allClasses} `: `` }logo`, href=href)&attributes(attributes)
+    block

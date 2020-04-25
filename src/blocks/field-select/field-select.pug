@@ -10,11 +10,10 @@ mixin field-select(title, name, classes)
         +field-select('Текст', 'имя', 'some-class')
 
   -
-    // список модификаторов
+    // список классов
     let allClasses = '';
     if(typeof(classes) !== 'undefined' && classes) {
-      let classesList = classes.split(',');
-      for (let item of classesList) {
+      for (let item of classes.split(',')) {
         allClasses = allClasses + item.trim();
       }
     }
@@ -27,7 +26,7 @@ mixin field-select(title, name, classes)
     ]
 
   if(typeof(title) !== 'undefined' && title)
-    label.field-select(class=allClasses)&attributes(attributes)
+    label(class=`${allClasses.length > 0 ?`${allClasses} `: `` }field-select`)&attributes(attributes)
       span.field-select__name!= title
       select.field-select__select(name=name)&attributes(attributes)
         each option in options

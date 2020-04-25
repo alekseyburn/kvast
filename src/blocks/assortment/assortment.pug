@@ -1,31 +1,28 @@
 //- Все примеси в этом файле должны начинаться c имени блока (assortment)
 
-mixin assortment(text, classes)
+mixin assortment(classes)
 
   //- Принимает:
-  //-   text    {string} - текст
   //-   classes    {string} - список классов
   //- Вызов:
-        +assortment('Текст', 'some-class')
+        +assortment('some-class')
+          +tr('1, 2, 3, 4, 5', true)        - строка-заголовок th
+          +tr('1, 2, 3, 4, 5')              - строка td
+          +tr('1, 2, 3, 4, 5', false, true  - строка td(первой ячейке задан класс new)
 
   -
-    // список модификаторов
+    // список классов
     let allClasses = '';
     if(typeof(classes) !== 'undefined' && classes) {
-      let classesList = classes.split(',');
-      for (let item of classesList) {
+      for (let item of classes.split(',')) {
         allClasses = allClasses + item.trim();
       }
     }
 
-  section.assortment(class=allClasses)&attributes(attributes)
+  section(class=`${allClasses.length > 0 ?`${allClasses} `: `` }assortment`)&attributes(attributes)
     h2.assortment__title Ассортимент
     table.assortment__table
-      +tr('Название, Алк., Ккал, Объём, Стоимость', true)
-      +tr('Классика, < 1,2%, 33, 330 мл, 120 Р.')
-      +tr('Шабаш, > 1,2%, 45, 330 мл, 250 Р.')
-      +tr('Вахтёр, < 1%, 35, 0,5 л, 150 Р.', false, true)
-      +tr('Романтик, < 0,5%, 27, 0,5 л, 90 Р.', false, true)
+      block
 
 mixin tr(names, isHead, isNew)
   -

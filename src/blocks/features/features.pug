@@ -1,24 +1,22 @@
 //- Все примеси в этом файле должны начинаться c имени блока (features)
 
-mixin features(text, classes)
+mixin features(classes)
 
   //- Принимает:
-  //-   text    {string} - текст
   //-   classes    {string} - список классов
   //- Вызов:
-        +features('Текст', 'some-class')
+        +features('some-class')
 
   -
-    // список модификаторов
+    // список классов
     let allClasses = '';
     if(typeof(classes) !== 'undefined' && classes) {
-      let classesList = classes.split(',');
-      for (let item of classesList) {
+      for (let item of classes.split(',')) {
         allClasses = allClasses + item.trim();
       }
     }
 
-  section.features(class=allClasses)&attributes(attributes)
+  section(class=`${allClasses.length > 0 ?`${allClasses} `: `` }features`)&attributes(attributes)
     h2.visually-hidden Преимущества
     ul.features__list
       li.features__item

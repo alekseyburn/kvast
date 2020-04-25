@@ -21,6 +21,11 @@ block content
   +history()
   +press()
   +assortment()
+    +tr('Название, Алк., Ккал, Объём, Стоимость', true)
+    +tr('Классика, < 1,2%, 33, 330 мл, 120 Р.')
+    +tr('Шабаш, > 1,2%, 45, 330 мл, 250 Р.')
+    +tr('Вахтёр, < 1%, 35, 0,5 л, 150 Р.', false, true)
+    +tr('Романтик, < 0,5%, 27, 0,5 л, 90 Р.', false, true)
   +order()
     +form('order__form','POST','/')
       +field-text({
@@ -87,7 +92,7 @@ block content
 block footer
   +logo('/', 'page-footer__logo')
     img.logo__img(src='/img/logo.svg', alt='Кваст')
-  +site-list()
+  +site-list('page-footer__nav')
   +social('page-footer__social')
     +social-link('instagram','/','Мы в инстаграме')
       //- svg

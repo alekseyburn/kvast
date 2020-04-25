@@ -13,13 +13,12 @@ mixin form(classes, formMethod, action)
     // список классов
     let allClasses = '';
     if(typeof(classes) !== 'undefined' && classes) {
-      let classesList = classes.split(',');
-      for (let item of classesList) {
+      for (let item of classes.split(',')) {
         allClasses = allClasses + item.trim();
       }
     }
 
-  form.form(class=allClasses, method=formMethod, action=action)&attributes(attributes)
+  form(class=`${allClasses.length > 0 ?`${allClasses} `: `` }form`, method=formMethod, action=action)&attributes(attributes)
     block
 
 mixin fieldset(legend, classes)
@@ -39,11 +38,10 @@ mixin fieldset(legend, classes)
     // список классов
     let allClasses = '';
         if(typeof(classes) !== 'undefined' && classes) {
-          let classesList = classes.split(',');
-          for (let item of classesList) {
+          for (let item of classes.split(',')) {
             allClasses = allClasses + item.trim();
           }
         }
-  fieldset.form__fieldset(class=allClasses)&attributes(attributes)
+  fieldset(class=`${allClasses.length > 0 ?`${allClasses} `: `` }form__fieldset`)&attributes(attributes)
     legend.form__legend!= legend
     block
