@@ -1,1 +1,11 @@
-.page-header {}
+.page-header {
+  background-color: $alter-bg-color;
+  background-image: url("../img/wheat-back.jpg@1x.jpg");
+}
+
+.page-header__slogan {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 70px;
+  color: $alter-text-color;
+}

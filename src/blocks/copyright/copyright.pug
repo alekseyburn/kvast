@@ -17,6 +17,8 @@ mixin copyright(classes)
     }
 
   div(class=`${allClasses.length > 0 ?`${allClasses} `: `` }copyright`)&attributes(attributes)
-    img.copyright__img(src='/', alt='логотип Html Academy')
+    picture
+      source(type='image/webp', srcset='img/htmlacademy.webp')
+      img.copyright__img(src='img/htmlacademy.png', width='27', height='34', alt='Html Academy')
     b.copyright__text Разработчик:
     a.copyright__link(href='/') HTML Academy

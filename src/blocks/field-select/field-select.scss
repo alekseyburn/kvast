@@ -2,7 +2,23 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.field-select {
+.field-select__name {
+  display: block;
 
-  $block-name:                &; // #{$block-name}__element
+  font-weight: 700;
+  line-height: calc(var(--text-lh) - 10px);
+  color: $head-text-color;
+  text-transform: uppercase;
+}
+
+.field-select__select {
+  width: 100%;
+
+  font: inherit;
+  font-weight: 700;
+  color: rgba(black, 0.3);
+  text-transform: uppercase;
+
+  background-color: rgba(black, 0.1);
+  border: none;
 }

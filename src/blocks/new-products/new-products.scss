@@ -2,7 +2,29 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.new-products {
+.new-products__title {
+  margin: 0;
+}
 
-  $block-name:                &; // #{$block-name}__element
+.new-products__name {
+  margin: 0;
+}
+
+.new-products__table {
+  border-collapse: collapse;
+  font-weight: 700;
+  color: $head-text-color;
+  text-transform: uppercase;
+}
+
+.new-products__composition {
+  margin: 0;
+
+  font-size: calc(var(--text-size) - 2px);
+  line-height: calc(var(--text-lh) - 6px);
+}
+
+.new-products__price {
+  line-height: calc(var(--text-lh) - 10px);
+  color: $head-text-color;
 }

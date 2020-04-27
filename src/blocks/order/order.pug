@@ -16,7 +16,7 @@ mixin order(classes)
       }
     }
 
-  section(class=`${allClasses.length > 0 ?`${allClasses} `: `` }order`)&attributes(attributes)
-    h2.order__title Заказать
+  section.section(class=`${allClasses.length > 0 ?`${allClasses} `: `` }order`)&attributes(attributes)
+    h2.section__title.order__title Заказать
     p.order__text Не ждите пока нас отрекламируют, как Вятский квас, и мы поднимем цены! Закажите настоящий крафтовый квас сейчас. При заказе от 10 баррелей — скидка 10%.
     block
