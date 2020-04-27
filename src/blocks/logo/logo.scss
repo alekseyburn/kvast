@@ -3,6 +3,11 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .logo {
+  //display: block;
+}
 
-  $block-name:                &; // #{$block-name}__element
+.logo__img {
+  display: block;
+  width: 140px;
+  height: 76px;
 }

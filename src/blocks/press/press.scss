@@ -3,6 +3,26 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .press {
+  background-color: $neutral-bg-color;
+}
 
-  $block-name:                &; // #{$block-name}__element
+.press__title {
+  margin: 0;
+}
+
+.press__blockquote {
+  margin: 0;
+}
+
+.press__text {
+  margin: 0;
+}
+
+.press__author {
+  font-weight: 700;
+  font-size: var(--text-size-l);
+  line-height: var(--text-lh-l);
+  color: $head-text-color;
+  text-transform: uppercase;
+  font-style: normal;
 }

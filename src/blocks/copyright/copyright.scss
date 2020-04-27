@@ -3,6 +3,16 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .copyright {
+  color: lighten($main-text-color, 20);
+  font-size: calc(var(--text-size) - 2px);
+}
 
-  $block-name:                &; // #{$block-name}__element
+.copyright__img {
+  display: block;
+  width: 27px;
+  height: 34px;
+}
+
+.copyright__link {
+  color: lighten($main-text-color, 20);
 }

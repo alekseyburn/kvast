@@ -3,6 +3,13 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .order {
+  background-color: $alter-bg-color;
+}
 
-  $block-name:                &; // #{$block-name}__element
+.order__title {
+  margin: 0;
+}
+
+.order__text {
+  margin: 0;
 }

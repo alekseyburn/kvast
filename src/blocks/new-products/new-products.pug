@@ -17,9 +17,9 @@ mixin new-products(classes)
     }
 
   section(class=`${allClasses.length > 0 ?`${allClasses} `: `` }new-products`)&attributes(attributes)
-    h2.new-products__title Новинки
+    h2.section__title.new-products__title Новинки
     article.new-products__article
-      h3.new-products__name Вахтёр
+      h3.section__title.new-products__name Вахтёр
       table.new-products__table
         tr
           th Алк.
@@ -34,7 +34,7 @@ mixin new-products(classes)
       +btn('Купить','new-products__buy-link')(href='/', class='btn--dark')
       b.new-products__price 150 Р.
     article.new-products__article
-      h3.new-products__name Романтик
+      h3.section__title.new-products__name Романтик
       table.new-products__table
         tr
           th Алк.

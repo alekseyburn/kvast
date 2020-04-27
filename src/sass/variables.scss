@@ -1,11 +1,23 @@
-$white: #fff;
-$black: #000;
-$main-text: #000;
-$main-bg: #fcf8fe;
+:root {
+  --text-size: 16px;
+  --text-size-l: 20px;
+  --text-size-xl: 40px;
+  --text-lh: 30px;
+  --text-lh-l: 30px;
+  --text-lh-xl: 61px;
+}
 
-$font: "Sample", -apple-system, blinkmacsystemfont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif !default;
-$font-size: 14px;
-$line-height: 150%;
+$main-text-color: #404040;
+$alter-text-color: #fff;
+$head-text-color: #000;
+
+$main-bg-color: #fff;
+$alter-bg-color: #ffcb78;
+$neutral-bg-color: #ede5d8;
+
+$accent-color: #834700;
+
+$font: "Arial", -apple-system, blinkmacsystemfont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
 
 $mobile-indent: 35px;
 $tablet-indent: 78px;

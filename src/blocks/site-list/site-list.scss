@@ -1,0 +1,10 @@
+.site-list {
+  @include reset-list();
+
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.site-list__link {
+  color: $alter-text-color;
+}

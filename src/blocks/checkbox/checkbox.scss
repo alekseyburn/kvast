@@ -1,0 +1,13 @@
+.checkbox {
+  display: block;
+}
+
+.checkbox__name {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $head-text-color;
+}
+
+.checkbox__input {
+  appearance: none;
+}

@@ -19,17 +19,16 @@ img {
 
 body {
   min-width: $mobile-width;
-  min-height: 100%;
   margin: 0 auto;
 
   font-weight: normal;
-  font-size: $font-size;
-  line-height: $line-height;
+  font-size: var(--text-size);
+  line-height: var(--text-lh);
   font-family: $font;
-  color: $main-text;
+  color: $main-text-color;
   word-break: break-word;
 
-  background-color: $main-bg;
+  background-color: $main-bg-color;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -46,6 +45,19 @@ p {
   hyphenate-limit-zone: 8%;
 }
 
+.section__title {
+  font-size: var(--text-size-xl);
+  line-height: var(--text-lh-xl);
+  color: $head-text-color;
+  text-transform: uppercase;
+}
+
+.section__subtitle {
+  font-size: var(--text-size-l);
+  line-height: var(--text-lh-l);
+  color: $head-text-color;
+  text-transform: uppercase;
+}
 //.svg-test {
 //  fill: black;
 //  stroke: green;

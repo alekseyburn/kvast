@@ -3,6 +3,26 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .btn {
+  display: inline-block;
 
-  $block-name:                &; // #{$block-name}__element
+  font-weight: 700;
+  line-height: calc(var(--text-lh) - 10px);
+  vertical-align: middle;
+  color: $accent-color;
+  text-transform: uppercase;
+
+  border: 2px solid $accent-color;
+
+  &--dark {
+    color: $alter-text-color;
+
+    background-color: $accent-color;
+  }
+
+  &--ghost {
+    color: rgba($head-text-color, 0.7);
+
+    border-color: rgba($head-text-color, 0.8);
+    opacity: 0.3;
+  }
 }

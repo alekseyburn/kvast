@@ -19,15 +19,15 @@ mixin assortment(classes)
       }
     }
 
-  section(class=`${allClasses.length > 0 ?`${allClasses} `: `` }assortment`)&attributes(attributes)
-    h2.assortment__title Ассортимент
+  section.section(class=`${allClasses.length > 0 ?`${allClasses} `: `` }assortment`)&attributes(attributes)
+    h2.section__title.assortment__title Ассортимент
     table.assortment__table
       block
 
 mixin tr(names, isHead, isNew)
   -
     let list = names.split(', ');
-  tr.assortment__row
+  tr.assortment__row(class=`${isHead ? `assortment__row--head` : ``}`)
     each item,index in list
       if (isHead)
         th.assortment__cell.assortment__cell--head= item
