@@ -28,7 +28,9 @@ mixin new-products(classes)
           th Ккал
           td 35
       p.new-products__composition Ржаной хлеб, Вода, Солод, Соль
-      img.new-products__img(src='/', alt='Вахтёр')
+      picture
+        source(type='image/webp', srcset='../img/bottle-left@1x.webp 1x, ../img/bottle-left@2x.webp 2x')
+        img.new-products__img(width='319', height='459', src='../img/bottle-left@1x.jpg', srcset='../img/bottle-left@2x.jpg 2x', alt='Вахтёр')
       p.new-products__description Терпкий и мощный, вкус этого кваса взбодрит после тяжёлого дня и придаст сил для вечерних приключений!
       +btn('Подробнее','new-products__link')(href='/')
       +btn('Купить','new-products__buy-link')(href='/', class='btn--dark')
@@ -43,7 +45,9 @@ mixin new-products(classes)
           th Ккал
           td 27
       p.new-products__composition Ячменный хлеб, Вода, Солод, Апельсин
-      img.new-products__img(src='/', alt='Романтик')
+      picture
+        source(type='image/webp', srcset='../img/bottle-right@1x.webp 1x, ../img/bottle-right@2x.webp 2x')
+        img.new-products__img(width='319', height='459', src='../img/bottle-right@1x.jpg', srcset='../img/bottle-right@2x.jpg 2x', alt='Романтик')
       p.new-products__description Лёгкий и освежающий напиток поможет сохранять отличное настроение в течение всего дня.
       +btn('Подробнее','new-products__link')(href='/')
       +btn('Купить','new-products__buy-link')(href='/', class='btn--dark')
