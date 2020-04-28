@@ -2,29 +2,111 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
+.new-products {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 45px auto 110px;
+}
+
 .new-products__title {
-  margin: 0;
+  flex-basis: 100%;
+  margin-bottom: 75px;
+}
+
+.new-products__article {
+  display: grid;
+  flex-basis: 50%;
+  align-content: start;
+  align-items: center;
+  padding-right: 25px;
+  padding-left: 35px;
+
+  column-gap: 5px;
+
+  border-right: 1px solid rgba($main-text-color, 0.3);
+  border-left: 1px solid rgba($main-text-color, 0.3);
+
+  grid-template-columns: 145px minmax(110px, min-content) auto;
+  grid-template-rows: repeat(5, auto);
+
+  &:nth-child(odd) {
+    margin-left: -1px;
+  }
 }
 
 .new-products__name {
-  margin: 0;
+  margin: 0 0 25px;
+
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
 }
 
 .new-products__table {
+  width: 150px;
+  margin-bottom: 10px;
+
   border-collapse: collapse;
   font-weight: 700;
   color: $head-text-color;
   text-transform: uppercase;
+
+  grid-column: 2 / -1;
+  grid-row: 2 / 3;
+  justify-self: end;
+
+  & td {
+    padding: 5px 10px;
+
+    border: 1px solid rgba($main-text-color, 0.5);
+  }
 }
 
 .new-products__composition {
+  max-width: 150px;
   margin: 0;
 
   font-size: calc(var(--text-size) - 2px);
   line-height: calc(var(--text-lh) - 6px);
+
+  grid-column: 2 / -1;
+  grid-row: 3 / 4;
+  justify-self: end;
+}
+
+.new-products__article picture {
+  z-index: -1;
+
+  grid-column: 1 / -1;
+  grid-row: 2 / 5;
+  justify-self: center;
+}
+
+.new-products__img {
+  display: block;
+  width: 319px;
+  height: 459px;
+  margin-bottom: 15px;
+}
+
+.new-products__description {
+  margin: 0 0 60px;
+
+  grid-column: 1 / -1;
+}
+
+.new-products__link {
+  grid-column: 1 / 2;
+}
+
+.new-products__buy-link {
+  grid-column: 2 / 3;
 }
 
 .new-products__price {
   line-height: calc(var(--text-lh) - 10px);
   color: $head-text-color;
+
+  grid-column: 3 / 4;
+  justify-self: center;
 }
