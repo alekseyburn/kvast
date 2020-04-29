@@ -4,6 +4,7 @@
 
 .field-text__name {
   display: block;
+  margin-bottom: 10px;
 
   font-weight: 700;
   line-height: calc(var(--text-lh) - 10px);
@@ -13,13 +14,18 @@
 
 .field-text__input {
   width: 100%;
+  padding: 10px;
 
   font: inherit;
+  font-weight: 700;
 
   background-color: rgba(black, 0.1);
   border: none;
 
-  resize: none;
+  &--textarea {
+    resize: none;
+    min-height: 120px;
+  }
 
   &::placeholder {
     font-weight: 700;
