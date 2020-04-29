@@ -2,28 +2,52 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
+.assortment {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
 .assortment__title {
-  margin: 0;
+  margin: 0 0 75px;
 }
 
 .assortment__table {
+  width: 100%;
+
   border-collapse: collapse;
   text-transform: uppercase;
-  width: 100%;
 }
 
 .assortment__row {
   border-bottom: 1px solid lighten($main-text-color, 50);
 
   &--head {
-    color: lighten($main-text-color, 30);
     font-size: 11px;
-    font-weight: 500;
+    color: lighten($main-text-color, 30);
   }
 }
 
 .assortment__cell {
-  padding: 0;
+  padding: 18px 0;
+
+  text-align: left;
+
+  &--head {
+    padding-top: 0;
+    padding-bottom: 30px;
+
+    font-weight: 500;
+  }
+
+  &:first-child {
+    width: 50%;
+  }
+
+  &:last-child {
+    text-align: right;
+  }
 
   &:not(.assortment__cell--head):first-child {
     font-weight: 700;
