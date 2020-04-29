@@ -29,11 +29,22 @@
 }
 
 .press__text {
+  position: relative;
+
   flex-basis: 90%;
   order: 1;
   margin: 0 0 35px;
 
   letter-spacing: 0.1px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -105px;
+
+    @include sprite($quotes);
+  }
 }
 
 .press__author {
