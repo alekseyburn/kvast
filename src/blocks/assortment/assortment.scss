@@ -41,6 +41,23 @@
     font-weight: 500;
   }
 
+  &--new {
+    position: relative;
+
+    &::after {
+      content: 'Новинка';
+      font-size: 8px;
+      background-color: black;
+      color: white;
+      position: absolute;
+      top: 32%;
+      margin-left: 25px;
+      line-height: 13px;
+      padding: 0 5px;
+      border-radius: 4px;
+    }
+  }
+
   &:first-child {
     width: 50%;
   }
