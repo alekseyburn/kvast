@@ -17,11 +17,11 @@ mixin history(classes)
     }
 
   section.section(class=`${allClasses.length > 0 ?`${allClasses} `: `` }history`)&attributes(attributes)
-    h2.section__title.history__title Немного теории
+    h2.section__title.history__title Немного истории
     dl.history__list
       dt.history__term
         h3.section__subtitle.history__subtitle Происхождение кваса
-        i.history__source Источник:
+        i.history__source Источник:&nbsp;
           a.history__link(href='/', target='_blank', rel='noopener noreferrer') ru.wikipedia.org
       dd.history__description
         p.history__text Квас на Руси появился в X-XI веке. Само слово «квас» тоже имеет древнерусское происхождение. Помимо России квас готовят в Белоруссии, Сербии, Македонии, Словакии и многих других странах, но называется он везде одинаково — квас.
@@ -30,7 +30,7 @@ mixin history(classes)
           img.history__img(width='201', height='100', src='../img/wiki-1@1x.jpg', srcset='../img/wiki-1@2x.jpg 2x', alt='Изображение кваса')
       dt.history__term
         h3.section__subtitle.history__subtitle Классификация кваса
-        i.history__source Источник:
+        i.history__source Источник:&nbsp;
           a.history__link(href='/', target='_blank', rel='noopener noreferrer') ru.wikipedia.org
       dd.history__description
         p.history__text По российскому ГОСТу для промышленного изготовления — это напиток с объёмной долей этилового спирта не более 1,2%, изготовленный в результате незавершённого спиртового и молочнокислого брожения сусла.
