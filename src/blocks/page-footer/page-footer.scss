@@ -1,3 +1,36 @@
 .page-footer {
+  display: grid;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 50px;
+
   background-color: black;
+
+  gap: 50px 90px;
+  grid-template-columns: 1fr 215px minmax(min-content, 700px) 1fr;
+}
+
+.page-footer__logo {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  justify-self: center;
+  margin-right: 10px;
+}
+
+.page-footer__nav {
+  max-width: 600px;
+
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.page-footer__social {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
+
+.page-footer__copyright {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  justify-self: end;
 }

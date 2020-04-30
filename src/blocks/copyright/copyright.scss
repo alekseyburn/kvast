@@ -5,6 +5,20 @@
 .copyright {
   color: lighten($main-text-color, 20);
   font-size: calc(var(--text-size) - 2px);
+  display: flex;
+  align-items: center;
+}
+
+.copyright__link {
+  color: lighten($main-text-color, 20);
+  position: relative;
+  width: 72px;
+  height: 68px;
+  background-color: lighten(black, 10);
+  border: 1px solid rgba($alter-bg-color, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .copyright__img {
@@ -13,6 +27,6 @@
   height: 34px;
 }
 
-.copyright__link {
-  color: lighten($main-text-color, 20);
+.copyright__text {
+  margin-left: 40px;
 }

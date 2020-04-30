@@ -100,9 +100,14 @@ block footer
   +site-list('page-footer__nav')
   +social('page-footer__social')
     +social-link('instagram','/','Мы в инстаграме')
-      //- svg
+      svg(class='social__svg', width='14', height='14')
+        use(xlink:href='img/sprite.svg#icon-insta')
     +social-link('facebook','/','Мы в фейсбуке')
+      svg(class='social__svg', width='8', height='16')
+        use(xlink:href='img/sprite.svg#icon-fb')
     +social-link('vk','/','Мы в контакте')
+      svg(class='social__svg', width='20', height='11')
+        use(xlink:href='img/sprite.svg#icon-vk')
   +copyright('page-footer__copyright')
 //- block append page-bottom
 //-   script(src='js/some.js')

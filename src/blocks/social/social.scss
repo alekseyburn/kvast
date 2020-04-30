@@ -4,12 +4,21 @@
 
 .social {
   @include reset-list();
+  display: flex;
+}
+
+.social__item {
+  &:not(:first-child) {
+    margin-left: -1px;
+  }
 }
 
 .social__link {
-  display: block;
   width: 72px;
   height: 68px;
   background-color: lighten(black, 10);
   border: 1px solid rgba($alter-bg-color, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

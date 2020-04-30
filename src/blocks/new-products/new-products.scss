@@ -6,12 +6,14 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 800px;
-  margin: 45px auto 110px;
+  margin: 0 auto;
+  padding-bottom: 110px;
+  padding-top: 80px;
 }
 
 .new-products__title {
   flex-basis: 100%;
-  margin-bottom: 75px;
+  margin: 0 0 75px;
 }
 
 .new-products__article {

@@ -4,3 +4,11 @@
 
   list-style: none;
 }
+
+@mixin retina-bg($image, $ext) {
+  background-image: url('../img/' + $image + '@1x.' + $ext);
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url('../img/' + $image + '@2x.' + $ext);
+  }
+}

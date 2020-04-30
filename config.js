@@ -6,7 +6,7 @@ let config = {
     'no-js'
   ],
   'alwaysAddBlocks': [
-    // 'sprite-svg',
+    'sprite-svg',
     'sprite-png',
     // 'object-fit-polyfill',
   ],

@@ -3,21 +3,18 @@
   align-content: flex-start;
   align-items: center;
   min-height: 550px;
-  padding-top: 60px;
+  padding-top: calc(var(--desktop-indent) - 20px);
 
   column-gap: 60px;
 
-  background-color: $alter-bg-color;
-  background-image: url("../img/wheat-back.jpg@1x.jpg");
+  background-color: $accent-color;
   background-size: cover;
   background-attachment: fixed;
 
   grid-template-columns: 1fr 140px minmax(min-content, 600px) 1fr;
   grid-template-rows: repeat(2, auto);
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/wheat-back.jpg@2x.jpg");
-  }
+  @include retina-bg('wheat-back.jpg', 'jpg');
 }
 
 .page-header__logo {
