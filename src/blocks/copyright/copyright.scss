@@ -3,30 +3,33 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .copyright {
-  color: lighten($main-text-color, 20);
-  font-size: calc(var(--text-size) - 2px);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+
+  font-size: calc(var(--text-size) - 2px);
+  color: lighten($main-text-color, 20);
 }
 
 .copyright__link {
-  color: lighten($main-text-color, 20);
   position: relative;
-  width: 72px;
-  height: 68px;
-  background-color: lighten(black, 10);
-  border: 1px solid rgba($alter-bg-color, 0.1);
+
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
+  width: 72px;
+  height: 68px;
+  margin-right: 40px;
+
+  color: lighten($main-text-color, 20);
+
+  background-color: lighten(black, 10);
+  border: 1px solid rgba($alter-bg-color, 0.1);
 }
 
 .copyright__img {
   display: block;
   width: 27px;
   height: 34px;
-}
-
-.copyright__text {
-  margin-left: 40px;
 }

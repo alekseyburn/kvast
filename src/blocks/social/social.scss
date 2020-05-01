@@ -3,8 +3,9 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .social {
-  @include reset-list();
   display: flex;
+
+  @include reset-list();
 }
 
 .social__item {
@@ -14,11 +15,12 @@
 }
 
 .social__link {
-  width: 72px;
-  height: 68px;
-  background-color: lighten(black, 10);
-  border: 1px solid rgba($alter-bg-color, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 72px;
+  height: 68px;
+
+  background-color: lighten(black, 10);
+  border: 1px solid rgba($alter-bg-color, 0.1);
 }

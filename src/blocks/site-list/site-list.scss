@@ -14,8 +14,8 @@
   &::after {
     content: "";
     position: absolute;
-    right: 0;
-    left: 0;
+    right: 10px;
+    left: 10px;
 
     height: 1px;
 
@@ -29,6 +29,11 @@
   &::after {
     bottom: 0;
   }
+}
+
+.site-list__item {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .site-list__link {

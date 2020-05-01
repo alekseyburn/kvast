@@ -12,7 +12,7 @@ block header
     picture
       source(type='image/webp', srcset='img/logo.webp')
       img.logo__img(src='img/logo.png', width='140', height='76', alt='Кваст')
-  +main-nav()
+  +main-nav('page-header__nav')
     +site-list('main-nav__list')
   p.page-header__slogan Крафтовый квас всему голова!
 
@@ -75,7 +75,7 @@ block content
         label: 'Доп. комментарий:',
         side: 'up',
         isTextarea: true,
-        classes: 'form__field',
+        classes: 'form__field form__field--textarea',
         attrs: {
           name: 'textarea',
           rows: 3
@@ -90,7 +90,7 @@ block content
           }
         },
       ])
-      +btn('Отправить заказ', 'form__btn', true)(class='btn--dark')
+      +btn('Отправить заказ', 'form__btn', true)(class='btn--alt')
 
 block footer
   +logo('/', 'page-footer__logo')

@@ -23,13 +23,13 @@
   border: none;
 
   &--textarea {
-    resize: none;
     min-height: 120px;
+
+    resize: none;
   }
 
   &::placeholder {
     font-weight: 700;
-
     color: rgba(black, 0.3);
   }
 }

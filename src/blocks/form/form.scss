@@ -4,9 +4,11 @@
 
 .form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 50px;
   max-width: 630px;
+
+  column-gap: 50px;
+
+  grid-template-columns: 1fr 1fr;
 }
 
 .form__field {
@@ -16,8 +18,15 @@
     grid-column: 1 / -1;
   }
 
+  &--textarea {
+    margin-bottom: 30px;
+  }
+
   &--checkbox {
     margin-bottom: 40px;
+
+    justify-self: start;
+    align-self: baseline;
   }
 }
 

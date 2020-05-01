@@ -12,15 +12,18 @@
   background-attachment: fixed;
 
   grid-template-columns: 1fr 140px minmax(min-content, 600px) 1fr;
-  grid-template-rows: repeat(2, auto);
 
-  @include retina-bg('wheat-back.jpg', 'jpg');
+  @include retina-bg("wheat-back.jpg", "jpg");
 }
 
 .page-header__logo {
   align-self: flex-start;
 
   grid-column: 2 / 3;
+}
+
+.page-header__nav {
+  grid-column: 3 / 4;
 }
 
 .page-header__slogan {

@@ -4,12 +4,12 @@
 
 .order {
   display: grid;
-  padding-top: 80px;
-  padding-bottom: 110px;
+  padding-top: var(--desktop-indent);
+  padding-bottom: calc(var(--desktop-indent) + 30px);
 
   background-color: $alter-bg-color;
 
-  grid-template-columns: auto minmax(min-content, 800px) auto;
+  grid-template-columns: 1fr minmax(min-content, 800px) 1fr;
 }
 
 .order__title {

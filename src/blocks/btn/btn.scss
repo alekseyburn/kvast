@@ -6,7 +6,7 @@
   font: inherit;
   cursor: pointer;
   display: inline-block;
-  padding: 13px 18px;
+  padding: 13px 20px;
   text-align: center;
 
   font-weight: 700;
@@ -17,7 +17,7 @@
 
   border: 2px solid $accent-color;
 
-  &--dark {
+  &--alt {
     color: $alter-text-color;
 
     background-color: $accent-color;

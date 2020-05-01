@@ -4,12 +4,12 @@
 
 .press {
   display: grid;
-  padding-top: 80px;
-  padding-bottom: 90px;
+  padding-top: var(--desktop-indent);
+  padding-bottom: calc(var(--desktop-indent) + 10px);
 
   background-color: $neutral-bg-color;
 
-  grid-template-columns: auto minmax(min-content, 800px) auto;
+  grid-template-columns: 1fr minmax(min-content, 800px) 1fr;
 }
 
 .press__title {

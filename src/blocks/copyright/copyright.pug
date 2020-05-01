@@ -17,7 +17,7 @@ mixin copyright(classes)
     }
 
   div(class=`${allClasses.length > 0 ?`${allClasses} `: `` }copyright`)&attributes(attributes)
-    a.copyright__link(href='/')
+    a.copyright__link(href='https://htmlacademy.ru/', target='_blank', rel='noopener noreferrer')
       picture
         source(type='image/webp', srcset='img/htmlacademy.webp')
         img.copyright__img(src='img/htmlacademy.png', width='27', height='34', alt='Html Academy')
