@@ -2,20 +2,64 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
+.history {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: var(--desktop-indent);
+  padding-bottom: var(--desktop-indent);
+}
+
 .history__title {
+  margin: 0 0 60px;
+}
+
+.history__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
+}
+
+.history__term {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .history__subtitle {
-  margin: 0;
+  margin: 0 20px 0 0;
+}
+
+.history__source {
+  flex-shrink: 0;
 }
 
 .history__link {
-  text-decoration: underline;
   color: $accent-color;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $accent-color-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.history__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 60px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .history__text {
+  flex-basis: 490px;
   margin: 0;
 }
 
@@ -23,4 +67,6 @@
   display: block;
   width: 201px;
   height: 100px;
+
+  border-radius: 5px;
 }

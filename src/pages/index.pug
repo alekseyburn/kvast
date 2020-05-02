@@ -9,10 +9,10 @@ block meta
 
 block header
   +logo('/', 'page-header__logo')
-  picture
-    source(type='image/webp', srcset='img/logo.webp')
-    img.logo__img(src='img/logo.png', width='140', height='76', alt='Кваст')
-  +main-nav()
+    picture
+      source(type='image/webp', srcset='img/logo.webp')
+      img.logo__img(src='img/logo.png', width='140', height='76', alt='Кваст')
+  +main-nav('page-header__nav')
     +site-list('main-nav__list')
   p.page-header__slogan Крафтовый квас всему голова!
 
@@ -41,7 +41,7 @@ block content
       +field-text({
         label: 'Номер телефона:',
         side: 'up',
-        classes: 'form__field',
+        classes: 'form__field form__field--tel',
         attrs: {
           name: 'phone',
           type: 'tel',
@@ -52,7 +52,7 @@ block content
       +field-text({
         label: 'Доп. номер:',
         side: 'up',
-        classes: 'form__field',
+        classes: 'form__field form__field--tel',
         attrs: {
           name: 'second phone',
           type: 'tel',
@@ -75,21 +75,22 @@ block content
         label: 'Доп. комментарий:',
         side: 'up',
         isTextarea: true,
-        classes: 'form__field',
+        classes: 'form__field form__field--textarea',
         attrs: {
-          name: 'textarea'
+          name: 'textarea',
+          rows: 3
         }
       })
       +checkbox([
         {
           title: 'Я согласен получать квасную рассылку',
-          classes: 'form__field',
+          classes: 'form__field form__field--checkbox',
           attrs: {
             name: 'mail',
           }
         },
       ])
-      +btn('Отправить заказ', 'form__btn', true)(class='btn--dark')
+      +btn('Отправить заказ', 'form__btn', true)(class='btn--alt')
 
 block footer
   +logo('/', 'page-footer__logo')
@@ -99,9 +100,14 @@ block footer
   +site-list('page-footer__nav')
   +social('page-footer__social')
     +social-link('instagram','/','Мы в инстаграме')
-      //- svg
+      svg(class='social__svg', width='14', height='14')
+        use(xlink:href='img/sprite.svg#icon-insta')
     +social-link('facebook','/','Мы в фейсбуке')
+      svg(class='social__svg', width='8', height='16')
+        use(xlink:href='img/sprite.svg#icon-fb')
     +social-link('vk','/','Мы в контакте')
+      svg(class='social__svg', width='20', height='11')
+        use(xlink:href='img/sprite.svg#icon-vk')
   +copyright('page-footer__copyright')
 //- block append page-bottom
 //-   script(src='js/some.js')

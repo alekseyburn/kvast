@@ -4,25 +4,75 @@
 
 .btn {
   display: inline-block;
+  padding: 13px 20px;
 
+  font: inherit;
   font-weight: 700;
   line-height: calc(var(--text-lh) - 10px);
   vertical-align: middle;
+  text-align: center;
   color: $accent-color;
   text-transform: uppercase;
 
   border: 2px solid $accent-color;
+  cursor: pointer;
 
-  &--dark {
+  transition: background-color 0.2s, color 0.2s;
+
+  will-change: background-color, color, animation;
+
+  &:hover,
+  &:focus {
+    color: $accent-color-hover;
+
+    border-color: $accent-color-hover;
+
+    animation: click 0.25s cubic-bezier(0.5, 1, 0.89, 1) both;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--alt {
     color: $alter-text-color;
 
     background-color: $accent-color;
+
+    &:hover,
+    &:focus {
+      color: $alter-text-color;
+
+      background-color: $accent-color-hover;
+    }
+
+    &:active {
+      color: rgba($alter-text-color, 0.3);
+
+      opacity: 1;
+    }
   }
 
   &--ghost {
     color: rgba($head-text-color, 0.7);
 
+    background-clip: padding-box;
     border-color: rgba($head-text-color, 0.8);
     opacity: 0.3;
+
+    &:hover,
+    &:focus {
+      color: $alter-text-color;
+
+      background-color: rgba($head-text-color, 0.8);
+      border-color: rgba($head-text-color, 0.8);
+    }
+
+    &:active {
+      color: rgba($alter-text-color, 0.4);
+
+      background-color: darken($main-text-color, 40);
+      border-color: darken($main-text-color, 40);
+    }
   }
 }

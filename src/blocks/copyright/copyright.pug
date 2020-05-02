@@ -17,8 +17,9 @@ mixin copyright(classes)
     }
 
   div(class=`${allClasses.length > 0 ?`${allClasses} `: `` }copyright`)&attributes(attributes)
-    picture
-      source(type='image/webp', srcset='img/htmlacademy.webp')
-      img.copyright__img(src='img/htmlacademy.png', width='27', height='34', alt='Html Academy')
-    b.copyright__text Разработчик:
-    a.copyright__link(href='/') HTML Academy
+    a.copyright__link(href='https://htmlacademy.ru/', target='_blank', rel='noopener noreferrer')
+      picture
+        source(type='image/webp', srcset='img/htmlacademy.webp')
+        img.copyright__img(src='img/htmlacademy.png', width='27', height='34', alt='Html Academy')
+    b.copyright__text Разработчик:&nbsp;
+    span.copyright__company HTML Academy

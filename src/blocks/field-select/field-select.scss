@@ -4,6 +4,7 @@
 
 .field-select__name {
   display: block;
+  margin-bottom: 10px;
 
   font-weight: 700;
   line-height: calc(var(--text-lh) - 10px);
@@ -13,6 +14,7 @@
 
 .field-select__select {
   width: 100%;
+  padding: 15px;
 
   font: inherit;
   font-weight: 700;
@@ -21,4 +23,11 @@
 
   background-color: rgba(black, 0.1);
   border: none;
+
+  &:hover,
+  &:focus {
+    color: $head-text-color;
+
+    background-color: rgba(black, 0.15);
+  }
 }

@@ -1,3 +1,17 @@
+@keyframes click {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.98);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -21,7 +35,7 @@ body {
   min-width: $mobile-width;
   margin: 0 auto;
 
-  font-weight: normal;
+  font-weight: 500;
   font-size: var(--text-size);
   line-height: var(--text-lh);
   font-family: $font;
@@ -85,8 +99,4 @@ p {
 //      background: svg-load('../img/Anime_stub_2.svg', fill=red);
 //    }
 //  }
-//}
-//
-//.testpicture {
-//  @include sprite($rage_ru);
 //}

@@ -19,12 +19,12 @@ mixin features(classes)
   section.section(class=`${allClasses.length > 0 ?`${allClasses} `: `` }features`)&attributes(attributes)
     h2.visually-hidden Преимущества
     ul.features__list
-      li.features__item
+      li.features__item.features__item--self-made
         h3.section__subtitle.features__title Варим сами
         p.features__text Вот этими самыми руками. Экспериментируем и творим, что хотим.
-      li.features__item
+      li.features__item.features__item--our
         h3.section__subtitle.features__title Своё, родное
         p.features__text Не заработка ради, а импортозамещения для. Поднимаем производство.
-      li.features__item
+      li.features__item.features__item--economy
         h3.section__subtitle.features__title Не экономим
         p.features__text Человек это то, что он ест и пьёт. У нас только качественные ингредиенты.

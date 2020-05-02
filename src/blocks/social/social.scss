@@ -3,13 +3,41 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .social {
+  display: flex;
+
   @include reset-list();
 }
 
+.social__item {
+  &:not(:first-child) {
+    margin-left: -1px;
+  }
+}
+
 .social__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 72px;
   height: 68px;
+
   background-color: lighten(black, 10);
   border: 1px solid rgba($alter-bg-color, 0.1);
+  will-change: transform;
+  transition: transform 0.2s ease-in;
+
+  &:hover,
+  &:focus {
+    position: relative;
+    z-index: 2;
+
+    border-color: rgba($alter-bg-color, 0.3);
+
+    transform: translateY(-5px);
+    transition: transform 0.2s ease-out;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }

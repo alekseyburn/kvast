@@ -3,6 +3,33 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .form {
+  display: grid;
+  max-width: 630px;
 
-  $block-name:                &; // #{$block-name}__element
+  column-gap: 50px;
+
+  grid-template-columns: 1fr 1fr;
+}
+
+.form__field {
+  margin-bottom: 25px;
+
+  &:not(.form__field--tel) {
+    grid-column: 1 / -1;
+  }
+
+  &--textarea {
+    margin-bottom: 30px;
+  }
+
+  &--checkbox {
+    margin-bottom: 40px;
+
+    justify-self: start;
+    align-self: baseline;
+  }
+}
+
+.form__btn {
+  justify-self: start;
 }

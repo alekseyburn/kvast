@@ -5,6 +5,7 @@
   --text-lh: 30px;
   --text-lh-l: 30px;
   --text-lh-xl: 61px;
+  --desktop-indent: 80px;
 }
 
 $main-text-color: #404040;
@@ -16,16 +17,17 @@ $alter-bg-color: #ffcb78;
 $neutral-bg-color: #ede5d8;
 
 $accent-color: #834700;
+$accent-color-hover: #6a3900;
 
 $font: "Arial", -apple-system, blinkmacsystemfont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
 
 $mobile-indent: 35px;
 $tablet-indent: 78px;
-$desktop-indent: 275px;
+$desktop-indent: 60px;
 
 $mobile-width: 320px;
 $tablet-width: 768px;
-$desktop-width: 1440px;
+$desktop-width: 1200px;
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;

@@ -3,26 +3,61 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .press {
+  display: grid;
+  padding-top: var(--desktop-indent);
+  padding-bottom: calc(var(--desktop-indent) + 10px);
+
   background-color: $neutral-bg-color;
+
+  grid-template-columns: 1fr minmax(min-content, 800px) 1fr;
 }
 
 .press__title {
-  margin: 0;
+  margin: 0 0 75px;
+
+  grid-column: 2 / 3;
 }
 
 .press__blockquote {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
+
+  grid-column: 2 / 3;
 }
 
 .press__text {
-  margin: 0;
+  position: relative;
+
+  flex-basis: 90%;
+  order: 1;
+  margin: 0 0 35px;
+
+  letter-spacing: 0.1px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -105px;
+
+    @include sprite($quotes);
+  }
 }
 
 .press__author {
+  order: 3;
+
   font-weight: 700;
   font-size: var(--text-size-l);
   line-height: var(--text-lh-l);
   color: $head-text-color;
   text-transform: uppercase;
   font-style: normal;
+}
+
+.press__link {
+  order: 2;
 }

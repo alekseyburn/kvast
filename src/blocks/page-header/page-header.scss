@@ -1,11 +1,40 @@
 .page-header {
-  background-color: $alter-bg-color;
-  background-image: url("../img/wheat-back.jpg@1x.jpg");
+  display: grid;
+  align-content: flex-start;
+  align-items: center;
+  min-height: 550px;
+  padding-top: calc(var(--desktop-indent) - 20px);
+
+  column-gap: 60px;
+
+  background-color: $accent-color;
+  background-size: cover;
+  background-attachment: fixed;
+
+  grid-template-columns: 1fr 140px minmax(min-content, 600px) 1fr;
+
+  @include retina-bg("wheat-back.jpg", "jpg");
+}
+
+.page-header__logo {
+  align-self: flex-start;
+
+  grid-column: 2 / 3;
+}
+
+.page-header__nav {
+  grid-column: 3 / 4;
 }
 
 .page-header__slogan {
+  margin: 120px 0 60px;
+
   font-weight: 700;
   font-size: 70px;
   line-height: 70px;
+  text-align: center;
   color: $alter-text-color;
+
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
 }
