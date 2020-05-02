@@ -75,3 +75,10 @@
     color: $head-text-color;
   }
 }
+
+@media (max-width: $desktop-width - 1px) {
+  .assortment {
+    padding-right: calc(var(--main-indent) - 20px);
+    padding-left: calc(var(--main-indent) - 20px);
+  }
+}

@@ -47,3 +47,13 @@
   width: 27px;
   height: 34px;
 }
+
+@media (max-width: $desktop-width - 1px) {
+  .copyright {
+    font-size: var(--text-size);
+  }
+
+  .copyright__link {
+    margin-right: 20px;
+  }
+}

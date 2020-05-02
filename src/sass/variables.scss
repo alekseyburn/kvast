@@ -31,7 +31,11 @@ $retina-dppx: 1.5dppx;
 @media (max-width: $desktop-width - 1px) {
   :root {
     --text-size: 12px;
-    --text-lh: 24px;
-    --main-indent: 60px;
+    --text-size-l: 16px;
+    --text-size-xl: 30px;
+    --text-lh: 20px;
+    --text-lh-l: 24px;
+    --text-lh-xl: 40px;
+    --main-indent: 50px;
   }
 }

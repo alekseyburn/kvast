@@ -70,3 +70,27 @@
 
   border-radius: 5px;
 }
+
+@media (max-width: $desktop-width - 1px) {
+  .history {
+    padding-right: calc(var(--main-indent) - 20px);
+    padding-left: calc(var(--main-indent) - 20px);
+  }
+
+  .history__title {
+    margin: 0 0 30px;
+  }
+
+  .history__description {
+    align-items: start;
+    margin: 0 0 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .history__text {
+    flex-basis: auto;
+  }
+}
