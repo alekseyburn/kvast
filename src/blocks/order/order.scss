@@ -4,8 +4,8 @@
 
 .order {
   display: grid;
-  padding-top: var(--desktop-indent);
-  padding-bottom: calc(var(--desktop-indent) + 30px);
+  padding-top: var(--main-indent);
+  padding-bottom: calc(var(--main-indent) + 30px);
 
   background-color: $alter-bg-color;
 

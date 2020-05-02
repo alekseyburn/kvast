@@ -3,8 +3,8 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .features {
-  padding-top: var(--desktop-indent);
-  padding-bottom: calc(var(--desktop-indent) + 10px);
+  padding-top: var(--main-indent);
+  padding-bottom: calc(var(--main-indent) + 10px);
 
   background-color: $alter-bg-color;
 }
@@ -23,9 +23,9 @@
   position: relative;
 
   flex-basis: 33%;
-  padding-top: calc(var(--desktop-indent) + 20px);
-  padding-right: calc(var(--desktop-indent) + 10px);
-  padding-left: calc(var(--desktop-indent) + 10px);
+  padding-top: calc(var(--main-indent) + 20px);
+  padding-right: calc(var(--main-indent) + 10px);
+  padding-left: calc(var(--main-indent) + 10px);
 
   border-right: 1px solid rgba(black, 0.15);
 

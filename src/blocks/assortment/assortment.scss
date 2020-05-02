@@ -5,8 +5,8 @@
 .assortment {
   max-width: 800px;
   margin: 0 auto;
-  padding-top: calc(var(--desktop-indent) + 10px);
-  padding-bottom: calc(var(--desktop-indent) + 10px);
+  padding-top: calc(var(--main-indent) + 10px);
+  padding-bottom: calc(var(--main-indent) + 10px);
 }
 
 .assortment__title {

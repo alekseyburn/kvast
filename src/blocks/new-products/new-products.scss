@@ -7,8 +7,8 @@
   flex-wrap: wrap;
   max-width: 800px;
   margin: 0 auto;
-  padding-top: var(--desktop-indent);
-  padding-bottom: calc(var(--desktop-indent) + 30px);
+  padding-top: var(--main-indent);
+  padding-bottom: calc(var(--main-indent) + 30px);
 }
 
 .new-products__title {
