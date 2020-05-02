@@ -23,4 +23,11 @@
 
   background-color: rgba(black, 0.1);
   border: none;
+
+  &:hover,
+  &:focus {
+    color: $head-text-color;
+
+    background-color: rgba(black, 0.15);
+  }
 }

@@ -32,6 +32,13 @@
 
   appearance: none;
 
+  &:hover ~ .checkbox__name::before,
+  &:focus ~ .checkbox__name::before {
+    background-color: rgba(black, 0.15);
+    outline: -webkit-focus-ring-color auto 1px;
+    outline-offset: -2px;
+  }
+
   &:checked ~ .checkbox__name::after {
     content: "¬";
     position: absolute;

@@ -36,6 +36,15 @@
 .history__link {
   color: $accent-color;
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $accent-color-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .history__description {

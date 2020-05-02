@@ -43,5 +43,37 @@
   color: $alter-text-color;
 
   border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
+  position: relative;
+  will-change: color;
+  transition: color 0.15s ease-in;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: white;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(15px);
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+  }
+
+  &:hover,
+  &:focus {
+    color: $alter-bg-color;
+
+    &::after {
+      transform: none;
+      opacity: 1;
+      transition-timing-function: ease-out;
+    }
+  }
+
+  &:active {
+    transition: none;
+    color: rgba($alter-bg-color, 0.3);
+  }
 }
