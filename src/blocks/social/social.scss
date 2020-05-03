@@ -41,3 +41,19 @@
     opacity: 0.5;
   }
 }
+
+@media (max-width: $tablet-width  - 1px) {
+  .social {
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .social__item {
+    margin-bottom: 20px;
+
+    &:not(:first-child) {
+      margin-left: 0;
+    }
+  }
+}
