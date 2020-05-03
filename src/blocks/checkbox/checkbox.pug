@@ -50,7 +50,7 @@ mixin checkbox(checkboxes)
       }
 
     label(class=`${allClasses.length > 0 ?`${allClasses} `: `` }checkbox`)
-      input.checkbox__input(type='checkbox')&attributes(checkbox.attrs)
+      input.checkbox__input.visually-hidden(type='checkbox')&attributes(checkbox.attrs)
       span.checkbox__name!= checkbox.title
       if(typeof (checkbox.helpText) !== 'undefined' && checkbox.helpText)
         p.checkbox__help-text!= checkbox.helpText

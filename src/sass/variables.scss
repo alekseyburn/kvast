@@ -39,3 +39,9 @@ $retina-dppx: 1.5dppx;
     --main-indent: 50px;
   }
 }
+
+@media (max-width: $tablet-width  - 1px) {
+  :root {
+    --main-indent: 30px;
+  }
+}

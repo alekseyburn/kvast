@@ -82,3 +82,45 @@
     padding-left: calc(var(--main-indent) - 20px);
   }
 }
+
+@media (max-width: $tablet-width  - 1px) {
+  .assortment {
+    padding-right: calc(var(--main-indent) - 10px);
+    padding-left: calc(var(--main-indent) - 10px);
+  }
+
+  .assortment__title {
+    margin-bottom: 30px;
+  }
+
+  .assortment__row {
+    &--head {
+      font-size: 10px;
+    }
+  }
+
+  .assortment__cell {
+    padding: 12px 3px;
+
+    font-size: calc(var(--text-size) - 1px);
+
+    &:first-child {
+      width: auto;
+    }
+
+    &--head {
+      padding-bottom: 10px;
+    }
+
+    &--new {
+      &::after {
+        top: auto;
+        bottom: 2px;
+        left: 0;
+
+        margin-left: 3px;
+        padding: 0 3px;
+      }
+    }
+  }
+}

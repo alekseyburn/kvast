@@ -45,3 +45,25 @@
     margin-right: 0;
   }
 }
+
+@media (max-width: $tablet-width  - 1px) {
+  .page-footer {
+    display: flex;
+    flex-direction: column;
+    padding-right: calc(var(--main-indent) - 10px);
+    padding-left: calc(var(--main-indent) - 10px);
+    gap: 0;
+  }
+
+  .page-footer__logo {
+    margin-bottom: 20px;
+  }
+
+  .page-footer__nav.site-list {
+    display: none;
+  }
+
+  .page-footer__copyright {
+    margin-right: auto;
+  }
+}

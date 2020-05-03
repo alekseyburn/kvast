@@ -33,3 +33,10 @@
 .form__btn {
   justify-self: start;
 }
+
+@media (max-width: $tablet-width  - 1px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+}

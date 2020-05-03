@@ -77,3 +77,45 @@
     color: rgba($alter-bg-color, 0.3);
   }
 }
+
+@media (max-width: $tablet-width  - 1px) {
+  .site-list {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  .site-list__item {
+    padding: 0;
+    border-top: 1px solid rgba(white, 0.2);
+    border-bottom: 1px solid rgba(white, 0.2);
+
+    &:not(:first-child) {
+      border-top: none;
+    }
+  }
+
+  .site-list__link {
+    font-size: var(--text-size-l);
+    line-height: var(--text-lh-l);
+    padding-left: calc(var(--main-indent) - 10px);
+    padding-right: calc(var(--main-indent) - 10px);
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .main-nav--opened .site-list {
+    display: flex;
+  }
+
+  html.no-js .site-list {
+    display: flex;
+  }
+}
