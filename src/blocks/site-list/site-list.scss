@@ -80,6 +80,7 @@
 
 @media (max-width: $tablet-width  - 1px) {
   .site-list {
+    display: none;
     flex-direction: column;
     text-align: center;
 
@@ -100,8 +101,21 @@
   }
 
   .site-list__link {
+    font-size: var(--text-size-l);
+    line-height: var(--text-lh-l);
+    padding-left: calc(var(--main-indent) - 10px);
+    padding-right: calc(var(--main-indent) - 10px);
+
     &::after {
       content: none;
     }
+  }
+
+  .main-nav--opened .site-list {
+    display: flex;
+  }
+
+  html.no-js .site-list {
+    display: flex;
   }
 }

@@ -26,6 +26,10 @@
   grid-column: 3 / 4;
 }
 
+.page-header__toggle {
+  display: none;
+}
+
 .page-header__slogan {
   margin: 120px 0 60px;
 
@@ -68,5 +72,11 @@
 
   .page-header__nav {
     width: 100%;
+  }
+
+  .page-header__slogan {
+    padding-left: calc(var(--main-indent) - 10px);
+    padding-right: calc(var(--main-indent) - 10px);
+    margin-top: 30px;
   }
 }
