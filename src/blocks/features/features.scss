@@ -80,3 +80,28 @@
     }
   }
 }
+
+@media (max-width: $tablet-width  - 1px) {
+  .features {
+    padding-right: calc(var(--main-indent) - 10px);
+    padding-left: calc(var(--main-indent) - 10px);
+  }
+
+  .features__list {
+    flex-direction: column;
+  }
+
+  .features__item {
+    border: none;
+    padding: calc(var(--main-indent) + 50px) 0 0;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .features__title {
+    margin-bottom: 10px;
+  }
+}
