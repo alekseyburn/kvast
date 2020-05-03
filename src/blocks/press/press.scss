@@ -4,8 +4,8 @@
 
 .press {
   display: grid;
-  padding-top: var(--desktop-indent);
-  padding-bottom: calc(var(--desktop-indent) + 10px);
+  padding-top: var(--main-indent);
+  padding-bottom: calc(var(--main-indent) + 10px);
 
   background-color: $neutral-bg-color;
 
@@ -60,4 +60,36 @@
 
 .press__link {
   order: 2;
+}
+
+@media (max-width: $desktop-width - 1px) {
+  .press {
+    //padding-right: calc(var(--main-indent) - 20px);
+    //padding-left: calc(var(--main-indent) - 20px);
+  }
+
+  .press__title {
+    margin: 0 0 40px;
+    padding-right: calc(var(--main-indent) - 20px);
+    padding-left: calc(var(--main-indent) - 20px);
+
+    grid-column: 2 / 3;
+  }
+
+  .press__blockquote {
+    margin-left: 105px;
+  }
+
+  .press__text {
+    flex-basis: 100%;
+
+    &::before {
+      left: -75px;
+    }
+  }
+
+  .press__author {
+    padding-right: calc(var(--main-indent) - 20px);
+    padding-left: calc(var(--main-indent) - 20px);
+  }
 }

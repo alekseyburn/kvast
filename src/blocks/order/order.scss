@@ -4,8 +4,8 @@
 
 .order {
   display: grid;
-  padding-top: var(--desktop-indent);
-  padding-bottom: calc(var(--desktop-indent) + 30px);
+  padding-top: var(--main-indent);
+  padding-bottom: calc(var(--main-indent) + 30px);
 
   background-color: $alter-bg-color;
 
@@ -27,4 +27,27 @@
 
 .order__form {
   grid-column: 2 / 3;
+}
+
+@media (max-width: $desktop-width - 1px) {
+  .order {
+
+  }
+
+  .order__title {
+    margin: 0 0 30px;
+    padding-right: calc(var(--main-indent) - 20px);
+    padding-left: calc(var(--main-indent) - 20px);
+  }
+
+  .order__text {
+    margin: 0 0 40px;
+    padding-right: calc(var(--main-indent) - 20px);
+    padding-left: calc(var(--main-indent) - 20px);
+  }
+
+  .order__form {
+    padding-right: calc(var(--main-indent) - 20px);
+    padding-left: calc(var(--main-indent) - 20px);
+  }
 }
