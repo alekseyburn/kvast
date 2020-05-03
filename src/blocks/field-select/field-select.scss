@@ -2,6 +2,19 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
+.field-select {
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    right: 12px;
+    bottom: 20px;
+    z-index: 0;
+
+    @include css-triangle(black, down, 10px);
+  }
+}
+
 .field-select__name {
   display: block;
   margin-bottom: 10px;
@@ -13,8 +26,11 @@
 }
 
 .field-select__select {
+  position: relative;
+  z-index: 1;
+
   width: 100%;
-  padding: 15px;
+  padding: 10px 20px;
 
   font: inherit;
   font-weight: 700;
@@ -24,10 +40,23 @@
   background-color: rgba(black, 0.1);
   border: none;
 
+  appearance: none;
+
   &:hover,
   &:focus {
     color: $head-text-color;
 
     background-color: rgba(black, 0.15);
+  }
+}
+
+@media (max-width: $desktop-width - 1px) {
+  .field-select {
+    &::after {
+      right: 12px;
+      bottom: 15px;
+
+      @include css-triangle(black, down, 8px);
+    }
   }
 }

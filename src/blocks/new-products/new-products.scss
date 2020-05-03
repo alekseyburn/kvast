@@ -144,6 +144,8 @@
 @media (max-width: $tablet-width  - 1px) {
   .new-products {
     flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
     padding-right: calc(var(--main-indent) - 10px);
     padding-bottom: var(--main-indent);
     padding-left: calc(var(--main-indent) - 10px);
@@ -155,6 +157,8 @@
 
   .new-products__article {
     margin-bottom: 30px;
+    margin-left: 0;
+    margin-right: 0;
     padding: 0;
 
     border: none;
@@ -163,6 +167,10 @@
 
     &:nth-child(odd) {
       border: none;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 
