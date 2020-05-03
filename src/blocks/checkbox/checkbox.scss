@@ -56,3 +56,9 @@
     transform: rotate(135deg);
   }
 }
+
+@media (max-width: $tablet-width  - 1px) {
+  .checkbox__name {
+    box-decoration-break: clone;
+  }
+}
