@@ -11,7 +11,7 @@ block header
   +logo('/', 'page-header__logo')
     picture
       source(type='image/webp', srcset='img/logo.webp')
-      img.logo__img(src='img/logo.png', width='140', height='76', alt='Кваст')
+      img.logo__img.lazyload(data-src='img/logo.png', width='140', height='76', alt='Кваст', loading='lazy')
   +main-nav('page-header__nav')
     button.main-nav__toggle(type='button', aria-label='Открыть/закрыть меню')
       span
@@ -98,7 +98,7 @@ block footer
   +logo('/', 'page-footer__logo')
     picture
       source(type='image/webp', srcset='img/logo.webp')
-      img.logo__img(src='img/logo.png', width='140', height='76', alt='Кваст')
+      img.logo__img.lazyload(data-src='img/logo.png', width='140', height='76', alt='Кваст', loading='lazy')
   +site-list('page-footer__nav')
   +social('page-footer__social')
     +social-link('instagram','/','Мы в инстаграме')

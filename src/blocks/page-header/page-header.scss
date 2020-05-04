@@ -11,8 +11,14 @@
   background-size: cover;
   background-attachment: fixed;
   grid-template-columns: 1fr 140px minmax(min-content, 600px) 1fr;
+}
 
-  @include retina-bg("wheat-back.jpg", "jpg");
+.no-webp .page-header {
+  @include retina-bg("wheat-back", "jpg");
+}
+
+.webp .page-header {
+  @include retina-bg("wheat-back", "webp");
 }
 
 .page-header__logo {
