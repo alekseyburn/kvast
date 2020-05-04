@@ -20,6 +20,6 @@ mixin copyright(classes)
     a.copyright__link(href='https://htmlacademy.ru/', target='_blank', rel='noopener noreferrer')
       picture
         source(type='image/webp', srcset='img/htmlacademy.webp')
-        img.copyright__img(src='img/htmlacademy.png', width='27', height='34', alt='Html Academy')
+        img.copyright__img.lazyload(data-src='img/htmlacademy.png', width='27', height='34', alt='Html Academy', loading='lazy')
     b.copyright__text Разработчик:&nbsp;
     span.copyright__company HTML Academy

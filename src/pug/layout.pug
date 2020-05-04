@@ -29,8 +29,9 @@ html(class='no-js', lang='ru')
       link(rel='stylesheet', href='css/style.css')
       script
         include ../js/head-script.js
+      script(src='js/bundle.js', defer)
 
-  body
+  body.webp
     +page-header()
       block header
     main.page-main
@@ -39,4 +40,4 @@ html(class='no-js', lang='ru')
       block footer
 
     block page-bottom
-      script(src='js/bundle.js')
+
